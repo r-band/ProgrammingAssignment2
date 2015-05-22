@@ -24,17 +24,13 @@ cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
 			inv <- x$getsolve ()
 
-	
+## null check	
 if (  !is.na(inv))
  {
 		message("getting cached data")
 		return (inv ) 
 	}
 
-##if ( !is.na(inv) ) {
-##		message("getting cached data")
-##		return (inv ) 
-##	}
 	data <- x$get()
 	inv <- solve(data)
       x$setsolve(inv)
