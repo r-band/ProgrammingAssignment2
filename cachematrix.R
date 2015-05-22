@@ -33,7 +33,8 @@ makeCacheMatrix <- function ( x = matrix()) {
 cacheSolve <- function (x) {
 	## get inverse from cache
 	inv <- x$getsolve ()
-	## check if inverse exists in cache. If it does retun inverse
+	## check if inverse exists in cache. If it does returns inverse
+	## using dim get the size of the inverse matrix from cache. If it is not null then cache exists.
 	if (!is.null(dim(inv)))
  	{
 		message("getting cached data")
